@@ -1,5 +1,6 @@
 from tkinter import*
 from decimal import*
+import calc_functions as cal
 #key input fucnction
 def click(key):
     if key == "=":
@@ -16,7 +17,21 @@ def click(key):
     elif key == ed1_pad_list[3]:
         display.insert(END, "149597887.5")
     elif key == ed2_pad_list[0]:
-        factorial(display.get())
+        n = display.get()
+        display.delete(0,END)
+        display.insert(END, cal.factorial(n))
+    elif key == ed2_pad_list[1]:
+        n = display.get()
+        display.delete(0,END)
+        display.insert(END, cal.to_roman(n))
+    elif key == ed2_pad_list[2]:
+        n = display.get()
+        display.delete(0,END)
+        display.insert(END, cal.to_binary(n))
+    elif key == ed2_pad_list[3]:
+        n = display.get()
+        display.delete(0,END)
+        display.insert(END, cal.from_binary(n))
     
     else:
         display.insert(END,key)
