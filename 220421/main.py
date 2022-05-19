@@ -1,4 +1,5 @@
 # 핑퐁 만들기(객체 만들기 활용)
+# 제발 심겨라
 from tkinter import *
 import table, ball, bat
 
