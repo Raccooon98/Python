@@ -35,7 +35,8 @@ def note():
         hwp = win32.Dispatch('HWPFrame.HwpObject')
         hwp.XHwpWindows.Item(0).Visible = True
         hwp.InsertPicture(name, Embedded=True, sizeoption=0)  
-        hwp.Run("MoveDocEnd")  
+        hwp.Run("MoveDocEnd")
+        hwp.Run("BreakPara") 
         def write(s):
             act=hwp.CreateAction("InsertText")
             set=act.CreateSet()
